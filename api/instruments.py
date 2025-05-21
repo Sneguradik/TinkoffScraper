@@ -9,4 +9,4 @@ async def get_instruments(ticker : str, client : AsyncServices) -> List[Instrume
     return list(filter(lambda x: True, (await client
        .instruments
        .find_instrument(query=ticker, instrument_kind= InstrumentType.INSTRUMENT_TYPE_SHARE))
-       .instruments))
+       .instruments))   
